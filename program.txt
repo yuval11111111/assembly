@@ -1,0 +1,35 @@
+add 4 4
+say hi
+
+
+saves a 
+
+multiply save save
+loop 5 2
+
+saves a
+
+
+divide save 450
+
+
+
+
+saves a
+
+count save
+
+subtract 1000 save
+
+
+
+
+say test
+
+
+random 10
+
+saves a
+
+
+say number save
