@@ -8,3 +8,5 @@
 + if the code isn't working open the program.txt and rewrite the program inside the txt file
 
   now close the powershell and the txt file and reopen it using the txt
+
+++ commands
