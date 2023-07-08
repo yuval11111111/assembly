@@ -1,3 +1,4 @@
+# activation
 + open index.exe
 + press 2 to write a new program or press 1 to run the last written program
 + press enter
@@ -9,4 +10,15 @@
 
   now close the powershell and the txt file and reopen it using the txt
 
-++ commands
+# commands
++ say -> prints what you type
++ loop -> loop back to the code line (loop x y)
++ count -> counts from 0 to a number (count x)
++ saves a/t -> saves the last value that been used (a -> answer t -> text from the last line)
++ divide -> divide a by b (a/b)
++ add -> add a to b (a+b)
++ subtract -> subtract a from b(a - b)
++ multiply -> multiply a and b (a*b)
++ random -> randomly pick a number between 1 - x (random x)
++ forget -> clear the memory from the last saved info in the run
+  
