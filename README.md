@@ -1,3 +1,11 @@
+# Installation
++ Download the files into a folder
++ open powershell and type
+```bash
+npm i js readline
+```
+  and press enter
++ now you successfully installed the assembly reader you can activate it 
 # activation
 + open index.exe
 + press 2 to write a new program or press 1 to run the last written program
