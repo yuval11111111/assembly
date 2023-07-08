@@ -4,7 +4,7 @@
 
   if you pressed 2 start writting the program
 
-  press enter to go to the next code line and to finish writting press enter
+  press enter to go to the next code line and to finish writting write end and press enter
 + if the code isn't working open the program.txt and rewrite the program inside the txt file
 
   now close the powershell and the txt file and reopen it using the txt
