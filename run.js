@@ -22,7 +22,7 @@ fs.readFile("./program.txt", "utf8", (err, code) => {
                 if (line >= L.length && L.length > 0 || !L && line == 2) {
 
                     return false
-                } else if (L.length <= 0 && line < 1) {
+                } else if (L.length <= 1 && line < 1) {
 
                     if (code.toLocaleLowerCase().startsWith(`say`)) {
                         setTimeout(() => {
@@ -32,21 +32,41 @@ fs.readFile("./program.txt", "utf8", (err, code) => {
                         }, 6)
                     }
                     if (code.toLocaleLowerCase().startsWith(`count`)) {
+                        let number = Number(code.split(` `).slice(1, 2).toString().replace(/save/, `${s}`).toString())
                         setTimeout(() => {
-                            let number = Number(code.split(` `).slice(1, 2).toString().replace(/save/, `${s}`))
-                            number = (number < 0) ? (number * -1) + 1 : number + 1
-                            let n = 0
+                            fs.writeFileSync("./debug.txt", `${number}`)
+                            if (number !== 0) {
+                                number = (number < 1) ? (number * -1) + 1 : number + 1
+                                let n = 0
 
-                            function count() {
-                                if (n < number) {
-                                    console.log(n)
-                                    n = n + 1
-                                    count()
-                                } else if (n >= number) return;
+                                count()
+
+                                function count() {
+                                    if (n + 1 < number + 1) {
+                                        if (n + 1 >= number + 1) return false
+                                        else {
+                                            console.log(n)
+                                            n = (n + 1 < number + 1) ? n + 1 : n
+                                            count()
+                                        }
+                                    }
+                                }
                             }
-                            count()
-                        }, 5)
+                        }, 7)
                     }
+                    if (code.toLocaleLowerCase().startsWith(`random`)) {
+                        function mode(n) {
+                            return Math.floor(Math.random() * n);
+                        }
+                        setTimeout(() => {
+                            let a = Number(code_line.split(` `).slice(1, 2).toString().replace(/save/, `${s}`))
+
+                            const answer2 = mode(a) + 1
+                            answer = answer2
+                            console.log(`${answer2}`)
+                        }, 7)
+                    }
+
                     line = line + 1
 
                     return false
@@ -75,27 +95,32 @@ fs.readFile("./program.txt", "utf8", (err, code) => {
                                 } else if (rounds <= Number(nums)) {
                                     return;
                                 }
-                            }, 5)
+                            }, 7)
                         })
                     }
                     if (code_line.toLocaleLowerCase().startsWith(`count`)) {
+                        let number = Number(code_line.split(` `).slice(1, 2).toString().replace(/save/, `${s}`).toString())
                         setTimeout(() => {
-                            let number = Number(code_line.split(` `).slice(1, 2).toString().replace(/save/, `${s}`))
-                            number = (number < 0) ? (number * -1) + 1 : number + 1
-                            let n = 0
+                            fs.writeFileSync("./debug.txt", `${number}`)
+                            if (number !== 0) {
+                                number = (number < 1) ? (number * -1) + 1 : number + 1
+                                answer = number
+                                let n = 0
 
-                            function count() {
-                                if (n + 1 < number + 1) {
-                                    if (n >= number + 1) return false
-                                    else {
-                                        console.log(n)
-                                        n = (n + 1 < number + 1) ? n + 1 : n
-                                        count()
+                                count()
+
+                                function count() {
+                                    if (n + 1 < number + 1) {
+                                        if (n + 1 >= number + 1) return false
+                                        else {
+                                            console.log(n.toString())
+                                            n = (n + 1 < number + 1) ? n + 1 : n
+                                            count()
+                                        }
                                     }
                                 }
                             }
-                            count()
-                        }, 6)
+                        }, 7)
                     }
                     if (code_line.toLowerCase().startsWith(`saves`)) {
                         setTimeout(() => {
@@ -138,7 +163,7 @@ fs.readFile("./program.txt", "utf8", (err, code) => {
                         setTimeout(() => {
                             let a = Number(code_line.split(` `).slice(1, 2).toString().replace(/save/, `${s}`))
                             let b = Number(code_line.split(` `).slice(2, 3).toString().replace(/save/, `${s}`))
-                            const answer2 = a * b
+                            let answer2 = a * b
                             answer = answer2
                             console.log(`${a}*${b} = ${answer2}`)
                         }, 7)
@@ -150,22 +175,36 @@ fs.readFile("./program.txt", "utf8", (err, code) => {
                         setTimeout(() => {
                             let a = Number(code_line.split(` `).slice(1, 2).toString().replace(/save/, `${s}`))
 
-                            const answer2 = mode(a) +1
+                            const answer2 = mode(a) + 1
                             answer = answer2
                             console.log(`${answer2}`)
                         }, 7)
                     }
-
+                    if (code_line.toLocaleLowerCase() == `forget`) {
+                        setTimeout(() => {
+                            fs.writeFileSync("./save.txt", ``)
+                        }, 7)
+                    }
+                    /*
+                    if (code_line.toLowerCase().startsWith(`debug`)) {
+                        setTimeout(() => {
+                            let debug_line = Number(code_line.split(` `).slice(1, 2).toString().toLowerCase())
+                            let line_num = debug_line - 1
+                            if (line - 1 !== debug_line) {
+                                line = line_num
+                            }
+                            setTimeout(() => {
+                                fs.writeFileSync("./debug.txt", `${answer}`)
+                            }, 1)
+                        }, 7)
+                    }
+                    */
                     line = line + 1
-
                 }
             })
         }, 1)
-
     }
-    setInterval(() => {
-        run()
-    }, 1000)
+    run()
 })
 
 /*
@@ -177,5 +216,8 @@ saves a/t -> saves the last value that been used
 divide -> divide a by b (a/b)
 add -> add a to b (a+b)
 subtract -> subtract a from b(a - b)
-multiply - > multiply a and b (a*b)
+multiply -> multiply a and b (a*b)
+random -> randomly pick a number between 1 - x 
+forget -> clear the memory from the last saved info in the run
+*debug -> saves the values of specific lines into a txt file*
  */

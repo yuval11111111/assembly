@@ -1,35 +1,19 @@
-add 4 4
-say hi
+forget
 
+random 5
 
-saves a 
+saves a
+
 
 multiply save save
-loop 5 2
 
-saves a
-
-
-divide save 450
-
-
+forget
 
 
 saves a
 
-count save
-
-subtract 1000 save
+loop 6 11
 
 
 
-
-say test
-
-
-random 10
-
-saves a
-
-
-say number save
+count 10
