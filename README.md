@@ -7,4 +7,4 @@
   press enter to go to the next code line and to finish writting press enter
 + if the code isn't working open the program.txt and rewrite the program inside the txt file
 
-  now close the powershell and reopen it using the txt
+  now close the powershell and the txt file and reopen it using the txt
