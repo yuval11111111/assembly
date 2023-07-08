@@ -7,7 +7,11 @@ npm i fs readline
   and press enter
 + now you've successfully installed the assembly reader now you can activate the application 
 # activation
-+ open index.exe
++ open powershell and type
+```bash
+node index
+```
+(or if you got the dev version open the index.exe file)
 + press 2 to write a new program or press 1 to run the last written program
 + press enter
 
