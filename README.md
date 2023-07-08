@@ -2,7 +2,7 @@
 + Download the files into a folder
 + open powershell and type
 ```bash
-npm i js readline
+npm i fs readline
 ```
   and press enter
 + now you successfully installed the assembly reader you can activate it 
