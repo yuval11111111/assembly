@@ -5,7 +5,7 @@
 npm i fs readline
 ```
   and press enter
-+ now you successfully installed the assembly reader you can activate it 
++ now you've successfully installed the assembly reader now you can activate the application 
 # activation
 + open index.exe
 + press 2 to write a new program or press 1 to run the last written program
