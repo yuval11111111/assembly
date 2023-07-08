@@ -34,4 +34,5 @@ node index
 + random -> randomly pick a number between 1 - x (random x)
 + forget -> clear the memory from the last saved info in the run
 + power -> do a to the power of b (a^b)
++ root -> gives the square root of a (√a)
   
