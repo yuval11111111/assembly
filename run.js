@@ -125,6 +125,15 @@ fs.readFile("./program.txt", "utf8", (err, code) => {
                             console.log(`${a}*${b} = ${answer2}`)
                         }, 7)
                     }
+                    //square root one command
+                    if (code.toLocaleLowerCase().startsWith(`root`)) {
+                        setTimeout(() => {
+                            let a = Number(code.split(` `).slice(1, 2).toString().replace(/save/, `${s}`))
+                            let answer2 = Math.sqrt(a)
+                            answer = answer2
+                            console.log(`√${a} = ${answer2}`)
+                        }, 7)
+                    }
                     line = line + 1
 
                     return false
@@ -263,6 +272,15 @@ fs.readFile("./program.txt", "utf8", (err, code) => {
                             console.log(`${a}^${b} = ${answer2}`)
                         }, 7)
                     }
+                    //square root multi-command
+                    if (code_line.toLocaleLowerCase().startsWith(`root`)) {
+                        setTimeout(() => {
+                            let a = Number(code_line.split(` `).slice(1, 2).toString().replace(/save/, `${s}`))
+                            let answer2 = Math.sqrt(a)
+                            answer = answer2
+                            console.log(`√${a} = ${answer2}`)
+                        }, 7)
+                    }
                     /*
                     if (code_line.toLowerCase().startsWith(`debug`)) {
                         setTimeout(() => {
@@ -298,5 +316,6 @@ multiply -> multiply a and b (a*b)
 random -> randomly pick a number between 1 - x 
 forget -> clear the memory from the last saved info in the run
 power -> do a to the power of b (a^b)
+root -> gives the square root of a (√a)
 *debug -> saves the values of specific lines into a txt file*
  */
