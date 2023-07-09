@@ -5,7 +5,13 @@
 npm i fs readline
 ```
   and press enter
-+ now you've successfully installed the assembly reader now you can activate the application 
++ now you've successfully installed the assembly reader now you can activate the application
+
+## node.js intallation
++ go to https://nodejs.org/en and download the LTS version
++ open the installation process
+
+  after the installation done click close and you now can run this program
 # activation
 + open powershell and type
 ```bash
