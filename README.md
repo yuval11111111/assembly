@@ -33,9 +33,9 @@ node index
 + loop -> loop back to the code line (loop x y)
 + count -> counts from 0 to a number (count x)
 + saves a/t -> saves the last value that been used (a -> answer t -> text from the last line)
-+ divide -> divide a by b (a/b)
++ divide -> divide b by a (a/b)
 + add -> add a to b (a+b)
-+ subtract -> subtract a from b(a - b)
++ subtract -> subtract b from a (a - b)
 + multiply -> multiply a and b (a*b)
 + random -> randomly pick a number between 1 - x (random x)
 + forget -> clear the memory from the last saved info in the run
