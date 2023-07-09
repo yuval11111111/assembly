@@ -1,19 +1,63 @@
-forget
+say hi 
+say how are you
+say im good
+say how much is 20000/34?
+say jk i'll do it for you
+divide 20000 34
+say i didn't really expected from you to know its 588.2352941176471
+say hope its working
+say if you see this how much is 1000 + 1000
+add 1000 1000
 
-random 5
+saves a
+
+say if you said save you're right
+add save 100
+multiply save 10
+
+saves a
+
+subtract 1000 3500
+
+saves a
+
+divide save -20
+
+saves a
+
+subtract 100 save
 
 saves a
 
 
-multiply save save
+say save
 
-forget
+count 12
+
+say hi
+
+count 12
+say 100
+saves t
+
+
+power save save
 
 
 saves a
 
-loop 6 11
+
+say save
+
+root save
 
 
+saves a
 
-count 10
+
+power save 0.5
+
+
+saves a
+
+say save
