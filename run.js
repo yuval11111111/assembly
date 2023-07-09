@@ -298,7 +298,7 @@ fs.readFile("./program.txt", "utf8", (err, code) => {
                     line = line + 1
                 }
             })
-        }, 3)
+        }, 10)
     }
     run()
 })
